@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Git & GitHub for Frontend Developers - RAD5 Tech Hub</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/reveal.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/theme/black.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    .reveal .slides {
+      font-family: 'Roboto', sans-serif;
+      color: #fff;
+      background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
+      text-align: left;
+    }
+    .reveal h1, .reveal h2, .reveal h3 {
+      font-family: 'Montserrat', sans-serif;
+      color: #00ccff;
+      text-transform: none;
+      text-shadow: 0 0 10px rgba(0, 204, 255, 0.5);
+    }
+    .reveal .rad5-logo {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 28px;
+      color: #00ccff;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+    }
+    .reveal .rad5-logo i {
+      margin-right: 10px;
+      color: #ffcc00;
+    }
+    .reveal .code-block {
+      background: #1a1a1a;
+      padding: 15px;
+      border-radius: 8px;
+      font-family: 'Consolas', monospace;
+      font-size: 0.9em;
+      color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      margin: 10px 0;
+    }
+    .reveal .highlight {
+      color: #ffcc00;
+      font-weight: 500;
+    }
+    .reveal .icon {
+      font-size: 2em;
+      margin-right: 10px;
+      color: #00ccff;
+    }
+    .reveal section {
+      background-size: cover;
+      background-position: center;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .reveal .list-icon {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .reveal .list-icon i {
+      color: #00ccff;
+      margin-right: 10px;
+    }
+    .reveal .animate-in {
+      animation: fadeIn 1s ease-in;
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section data-background="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80">
+        <div class="rad5-logo"><i class="fas fa-code"></i>RAD5 Tech Hub</div>
+        <h1 class="animate-in" style="margin-top: 40px;">Git & GitHub for Frontend Developers</h1>
+        <h3 class="animate-in">Master Version Control and Collaboration</h3>
+        <p class="animate-in">Presented by Chibuike Christian, RAD5 Tech Hub</p>
+      </section>
+
+      <section data-background="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80">
+        <h2 class="animate-in">Why Version Control?</h2>
+        <p>Frontend developers need to:</p>
+        <div class="list-icon"><i class="fas fa-file-code"></i><span>Track changes in HTML, CSS, JS files</span></div>
+        <div class="list-icon"><i class="fas fa-users"></i><span>Collaborate without overwriting code</span></div>
+        <div class="list-icon"><i class="fas fa-undo"></i><span>Revert mistakes easily</span></div>
+        <div class="list-icon"><i class="fas fa-code-branch"></i><span>Work on features safely</span></div>
+        <p class="highlight animate-in">Git makes this possible!</p>
+      </section>
+
+      <section data-background="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80">
+        <h2 class="animate-in">What is Git?</h2>
+        <p>A <span class="highlight">distributed version control system</span>:</p>
+        <div class="list-icon"><i class="fas fa-check-circle"></i><span>Tracks changes in your codebase</span></div>
+        <div class="list-icon"><i class="fas fa-bolt"></i><span>Fast, offline, and open-source</span></div>
+        <div class="list-icon"><i class="fas fa-users"></i><span>Used by 90%+ of developers</span></div>
+        <p>Created by Linus Torvalds (Linux kernel)</p>
+        <img src="https://git-scm.com/images/logo@2x.png" alt="Git Logo" style="width: 150px; margin-top: 20px;">
+      </section>
+
+      <section data-background="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80">
+        <h2 class="animate-in">What is GitHub?</h2>
+        <p>A platform for hosting Git repositories:</p>
+        <div class="list-icon"><i class="fas fa-cloud"></i><span>Cloud-based collaboration</span></div>
+        <div class="list-icon"><i class="fas fa-tools"></i><span>Features: Pull requests, issues, Actions</span></div>
+        <div class="list-icon"><i class="fas fa-globe"></i><span>Home to 100M+ repositories</span></div>
+        <p class="highlight animate-in">Perfect for team projects at RAD5 Tech Hub!</p>
+        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo" style="width: 100px; margin-top: 20px;">
+      </section>
+
+      <section data-background="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80">
+        <h2 class="animate-in">Setting Up Git</h2>
+        <p><i class="fas fa-download icon"></i>Install Git: <a href="https://git-scm.com/downloads">git-scm.com</a></p>
+        <p><i class="fas fa-cog icon"></i>Configure Git:</p>
+        <pre class="code-block">
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
+        </pre>
+        <p><i class="fas fa-check icon"></i>Verify: <code>git --version</code></p>
+      </section>
+
+      <section data-background="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80">
+        <h2 class="animate-in">Setting Up GitHub</h2>
+        <p><i class="fas fa-user-plus icon"></i>Create an account at <a href="https://github.com">github.com</a></p>
+        <p><i class="fas fa-key icon"></i>(Optional) Set up SSH:</p>
+        <pre class="code-block">
+ssh-keygen -t rsa -b 4096 -C "your.email@example.com"
+cat ~/.ssh/id_rsa.pub
+        </pre>
+        <p>Add key to GitHub: Settings > SSH and GPG keys</p>
+      </section>
+
+      <section data-background="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80">
+        <h2 class="animate-in">Basic Git Workflow</h2>
+        <p>Create a frontend project:</p>
+        <pre class="code-block">
+mkdir my-frontend-project
+cd my-frontend-project
+git init
+touch index.html styles.css app.js
+git add index.html
+git commit -m "Add initial HTML structure"
+        </pre>
+        <p>Check progress: <code>git status</code>, <code>git log</code></p>
+        <img src="https://img.icons8.com/color/48/000000/html-5.png" alt="HTML Icon" style="width: 50px;">
+      </section>
+
+      <section data-background="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80">
+        <h2 class="animate-in">Pushing to GitHub</h2>
+        <p><i class="fas fa-plus-circle icon"></i>Create a repository on GitHub</p>
+        <p><i class="fas fa-upload icon"></i>Connect and push:</p>
+        <pre class="code-block">
+git remote add origin git@github.com:username/my-frontend-project.git
+git branch -M main
+git push -u origin main
+        </pre>
+        <p class="highlight animate-in">Your code is now live on GitHub!</p>
+      </section>
+
+      <section data-background="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80">
+        <h2 class="animate-in">Collaborating with GitHub</h2>
+        <p><i class="fas fa-download icon"></i>Clone a repo:</p>
+        <pre class="code-block">
+git clone git@github.com:username/my-frontend-project.git
+        </pre>
+        <p><i class="fas fa-user-friends icon"></i>Add collaborators: Repository > Settings > Collaborators</p>
+        <p><i class="fas fa-sync icon"></i>Pull updates: <code>git pull origin main</code></p>
+      </section>
+
+      <section data-background="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80">
+        <h2 class="animate-in">Branching</h2>
+        <p>Create a branch for new features:</p>
+        <pre class="code-block">
+git checkout -b feature/add-button
+        </pre>
+        <p>Add changes, commit, and push:</p>
+        <pre class="code-block">
+git add .
+git commit -m "Add button to homepage"
+git push origin feature/add-button
+        </pre>
+        <img src="https://img.icons8.com/ios/50/000000/git.png" alt="Git Branch Icon" style="width: 50px;">
+      </section>
+
+      <section data-background="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80">
+        <h2 class="animate-in">Pull Requests</h2>
+        <p>Propose and review changes:</p>
+        <div class="list-icon"><i class="fas fa-code-branch"></i><span>Create a PR on GitHub for your branch</span></div>
+        <div class="list-icon"><i class="fas fa-eye"></i><span>Team reviews and suggests changes</span></div>
+        <div class="list-icon"><i class="fas fa-check-double"></i><span>Merge into main branch</span></div>
+        <p>Update local repo: <code>git checkout main; git pull origin main</code></p>
+      </section>
+
+      <section data-background="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80">
+        <h2 class="animate-in">Handling Conflicts</h2>
+        <p>When two changes clash:</p>
+        <pre class="code-block">
+<<<<<<< HEAD
+h1 { color: blue; }
+=======
+h1 { color: red; }
+>>>>>>> feature/add-button
+        </pre>
+        <p>Resolve manually, then:</p>
+        <pre class="code-block">
+git add styles.css
+git commit -m "Resolve merge conflict"
+git push origin main
+        </pre>
+        <img src="https://img.icons8.com/color/48/000000/css3.png" alt="CSS Icon" style="width: 50px;">
+      </section>
+
+      <section data-background="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80">
+        <h2 class="animate-in">Best Practices for Frontend Devs</h2>
+        <div class="list-icon"><i class="fas fa-save"></i><span>Commit often with clear messages</span></div>
+        <div class="list-icon"><i class="fas fa-ban"></i><span>Use .gitignore for node_modules, .env</span></div>
+        <div class="list-icon"><i class="fas fa-code-branch"></i><span>Create branches for features or fixes</span></div>
+        <div class="list-icon"><i class="fas fa-sync-alt"></i><span>Pull updates regularly to avoid conflicts</span></div>
+        <div class="list-icon"><i class="fas fa-robot"></i><span>Use GitHub Actions for automation</span></div>
+      </section>
+
+      <section data-background="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80">
+        <h2 class="animate-in">Hands-On Project</h2>
+        <p>Build a portfolio site with HTML, CSS, JS:</p>
+        <div class="list-icon"><i class="fas fa-plus-circle"></i><span>Create a GitHub repo</span></div>
+        <div class="list-icon"><i class="fas fa-user-friends"></i><span>Add a collaborator</span></div>
+        <div class="list-icon"><i class="fas fa-code-branch"></i><span>Create a branch for a feature (e.g., CSS animation)</span></div>
+        <div class="list-icon"><i class="fas fa-check-double"></i><span>Submit a PR and merge</span></div>
+        <div class="list-icon"><i class="fas fa-globe"></i><span>Deploy with GitHub Pages</span></div>
+        <p class="highlight animate-in">Let’s code together at RAD5 Tech Hub!</p>
+      </section>
+
+      <section data-background="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80">
+        <h2 class="animate-in">Resources</h2>
+        <div class="list-icon"><i class="fas fa-book"></i><span><a href="https://git-scm.com/book/en/v2">Pro Git Book</a></span></div>
+        <div class="list-icon"><i class="fas fa-graduation-cap"></i><span><a href="https://training.github.com/kit/">GitHub Training Kit</a></span></div>
+        <div class="list-icon"><i class="fas fa-compass"></i><span><a href="https://gitexplorer.com/">Git Explorer</a></span></div>
+        <div class="list-icon"><i class="fas fa-chalkboard-teacher"></i><span><a href="https://lab.github.com/">GitHub Learning Lab</a></span></div>
+      </section>
+
+      <section data-background="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80">
+        <div class="rad5-logo"><i class="fas fa-code"></i>RAD5 Tech Hub</div>
+        <h1 class="animate-in">Thank You!</h1>
+        <p class="animate-in">Questions? Let’s discuss!</p>
+        <p class="animate-in">Keep coding, RAD5 Tech Hub frontend devs!</p>
+        <img src="https://img.icons8.com/fluency/48/000000/confetti.png" alt="Confetti Icon" style="width: 100px; margin-top: 20px;">
+      </section>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/reveal.min.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      transition: 'fade',
+      transitionSpeed: 'slow',
+      slideNumber: true,
+      backgroundTransition: 'zoom'
+    });
+  </script>
+</body>
+</html>

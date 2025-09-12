@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="src/output.css">
+    <style>
+        .container{
+            width: 60%;
+            height: fit-content;
+            border: 2px solid lime;
+            background-color: rgba(0, 255, 0, 0.559);
+            margin: 30px auto;
+            padding: 15px;
+        }
+        .our-grid-container{
+            display: grid;
+            width: 100%;
+            height: 80vh;
+            grid-template-rows: 20% 80%;
+            gap: 10px;
+             margin: 10px 0px;
+        }
+        .our-grid-container>div{
+            border: 2px solid black;
+            text-align: center;
+            font-size: 35px;
+             font-weight: bold;
+             
+        }
+        .second-container{
+            display: grid;
+            grid-template-rows: 80% 20%;
+            gap: 10px;
+            border: none !important;
+
+        }
+        .second-container>div{
+            border: 2px solid black;
+        }
+        
+        .second-container .second-child1{
+            display: grid;
+            grid-template-columns: 20% 80%;
+            gap: 10px;
+            border: none !important;
+        }
+        .second-child1>div{
+            border: 2px solid black;
+
+        }
+        .second-child1{
+            border: none !important;
+        }
+        .second-child1 .second-child1-child2{
+            display: grid;
+            grid-template-rows: auto auto;
+            gap: 10px;
+        }
+        .second-child1-child2>div{
+            border: 2px solid black;
+
+        }
+        .second-child1-child2{
+            border: none;
+        }
+        .last-child{
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: 10px;
+        }
+        .last-child>div{
+            border: 2px solid black;
+
+        }
+        .bg{
+            width: 60%;
+            height: 60vh;
+            border: 2px solid black;
+            margin: 40px auto;
+            background-image: linear-gradient(to bottom, red , blue, black);
+        }
+        button{
+            background-color: blue;
+            color: white;
+            padding: 5px 15px;
+            
+        }
+        button:hover{
+            opacity: 0.4;
+        }
+        .second-child1-child2{
+            border: none !important;
+        }
+        .last-child{
+            border: none !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-red-600 text-4xl font-bold text-center">Welcome to CSS Grid Class</h1>
+        <div class="our-grid-container">
+            <div> Header</div>
+            <div class="second-container">
+                <div class="second-child1">
+                    <div>Side Bar</div>
+                    <div class="second-child1-child2">
+                        <div>Content 1</div>
+                        <div class="last-child">
+                            <div>Content 2 </div>
+                            <div class="">Content 3</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="second-child2">Footer</div>
+            </div>
+        </div>
+    </div>
+    <div class="bg">
+        <button>Click Me!</button>
+
+    </div>
+
+</body>
+</html>
