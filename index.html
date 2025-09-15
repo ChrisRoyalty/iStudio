@@ -3,66 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Git and Github</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="src/output.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <style>
-        *{
-            padding: 0px;
-            margin: 0px;
+        .dropdown{
+            display: none;
         }
-        table,tr, th, td{
-            border: 2px solid black;
-            border-collapse: collapse;
-            padding: 10px;
-        }
-        .container{
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 15px;
-        }
-        th{
-            background-color: black;
-            color: white;
-            border: 1px solid white;
-        }
-        h1{
-            color: red;
-            font-size: 35px;
+        .dropdown-container:hover .dropdown{
+            display: block;
         }
     </style>
 </head>
+
 <body>
-    <div class="container">
-        <h1>Welcome to RAD5 Tech Hub Frontend Web Dev Bootcamp</h1>
-    <table>
-        <tr>
-            <th>S/N</th>
-            <th>NAME</th>
-            <th>TRACK</th>
-            <th>PROJECTS</th>
-        </tr>
-        <tr>
-            <td>1.</td>
-            <td>Christian Chibuike</td>
-            <td>Frontend Web Dev</td>
-            <td>IStudio Enterprise</td>
-        </tr>
-        <tr>
-            <td>2.</td>
-            <td>Daniel Chinagorom</td>
-            <td>Backend</td>
-            <td>John-Jon Ventures</td>
-        </tr>
-        <tr>
-            <td>3.</td>
-            <td>Mac Chidera</td>
-            <td>UI/UX</td>
-            <td>AirSpeed Sales</td>
-        </tr>
-    </table>
+    
+    <div class="w-full h-screen bg-[url(/images/bg.jpeg)]">
+        <header class="w-screen h-[15%] text-black flex justify-center">
+       <div class="w-[90%] h-full flex justify-between items-center border-b-2 border-white">
+        <a href="" class="logo text-[40px]">iSTUDIO</a>
+        <nav class=" flex gap-8 max-[791px]:hidden">
+            <a class="hover:text-green-600 text-[18px]" href="">Home</a>
+            <a class="hover:text-green-600 text-[18px]" href="">About</a>
+            <a class="hover:text-green-600 text-[18px]" href="">Service</a>
+            <a class="hover:text-green-600 text-[18px]" href="">Projects</a>
+            <div class="dropdown-container relative">
+                <a href="" class="hover:text-green-600 text-[18px]">Pages <i class="bi bi-chevron-down"></i></a>
+                <div class="dropdown flex-col gap-8 absolute top-8 py-2 bg-gray-300 ml-[-15px] pl-4 pr-8">
+                    <a href="" class="hover:bg-green-700">Features</a>
+                    <a href="" class="hover:bg-green-700">Our Team</a>
+                    <a href="" class="hover:bg-green-700">Testimonial</a>
+                    <a href="" class="hover:bg-green-700">404 Page</a>
+                </div>
+            </div>
+            <a href="" class="hover:text-green-600 text-[18px]">Contact</a>
+        </nav>
+            <i class="bi bi-list text-4xl max-[791px]:block min-[792px]:hidden"></i>
+       </div>
+    </header>
+    <div class="w-full h-[85%]">
+        <div class="w-[90%] h-full grid grid-cols-1 max-[1195px]:grid-rows-2  min-[1196px]:grid-cols-2  mx-auto gap-8">
+            <div class="flex flex-col justify-center leading-24 gap-4">
+                <h1 class="text-[80px]">We Make Your <span class="text-green-600"> Home</span> Better</h1>
+                <p class="border-2 border-white text-2xl w-fit py-2 px-10">An Award Winning Studio Since 1990
+</p>
+            </div>
+            <div class="w-full h-full flex flex-col justify-end items-end relative">
+                <div class="bg1 bg-[#0d6b68] w-[60%] lg:h-[80%] h-[90%] flex flex-col items-end justify-center gap-2 pr-8">
+                    <a href="" class="border-2 border-white w-4 h-4"></a>
+                    <a href="" class="border-2 border-white w-4 h-10 bg-white"></a>
+                    <a href="" class="border-2 border-white w-4 h-4"></a>
+
+                </div>
+                <div class="bg2 bg-[url(/images/hero-slider-2.jpg)] bg-center bg-cover bg-no-repeat w-[80%] lg:h-[60%] h-[70%] absolute left-0 lg:bottom-10 bottom-8 opacity-[0.8]"></div>
+            </div>
+        </div>
     </div>
+    </div>
+
+
+
+
+
+
+    <script src="node_modules/flowbite/dist/flowbite.min.js"></script>
 </body>
 </html>
